@@ -14,7 +14,7 @@
     </div>
   </div>
   <div ng-app="techApp" ng-controller="TechListController">
-    <div class="nav bg-dark text-light">
+    <div class="nav bg-dark text-light py-1">
       <div class="nav-item">
         <select class="form-control" ng-model="sortorder">
           <option value="-year">Latest First</option>
@@ -25,6 +25,9 @@
         <input class="form-check-input" type="checkbox" ng-model="filter" data-ng-true-value="{ org: 'Community' }" data-ng-false-value="''">
         Show only Community-developed frameworks
       </label>
+      <div class="nav-item">
+        <a href="AddTech.html" class="btn btn-danger" role="button">Don't see your's ? Add One!</a>
+      </div>
     </div>
     <div class="list-group">
       <div ng-repeat="tech in techList | orderBy: sortorder | filter: filter" class="list-group-item bg-dark text-white border border-light">
