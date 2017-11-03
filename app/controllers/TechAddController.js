@@ -1,4 +1,4 @@
-var TechAddController = techApp.controller('TechAddController', function ($scope) {
+var TechAddController = techApp.controller('TechAddController', function ($scope, techData) {
   $scope.currentTech = {
     name: '',
     type: '',
@@ -10,6 +10,7 @@ var TechAddController = techApp.controller('TechAddController', function ($scope
   };
   $scope.handleSubmit = () => {
     console.log(JSON.stringify($scope.currentTech));
+    techData.techData.push($scope.currentTech);
     window.location = 'TechList.html';
   }
 });

@@ -1,0 +1,34 @@
+<form ng-app="techApp" ng-controller="TechAddController" class="bg-dark text-light py-2" ng-submit="handleSubmit()">
+  <div class="form-group row mx-0">
+    <label class="col-sm-2">Name</label>
+    <input class="form-control col-sm-9" type="text" ng-model="currentTech.name" value=""></br>
+  </div>
+  <div class="form-group row mx-0">
+    <label class="col-sm-2">Type</label>
+    <input class="form-control col-sm-9" type="text" ng-model="currentTech.type" value=""></br>
+  </div>
+  <div class="form-group row mx-0">
+    <label class="col-sm-2">Year of release</label>
+    <input class="form-control col-sm-9" type="number" ng-model="currentTech.year" value="" min="2000" max="2017"></br>
+  </div>
+  <div class="form-group row mx-0">
+    <label class="col-sm-2">Developed by ('Community' or other options)</label>
+    <input class="form-control col-sm-9" type="text" ng-model="currentTech.org" value=""></br>
+  </div>
+  <div class="form-group row mx-0">
+    <label class="col-sm-2">Current Stable version</label>
+    <input class="form-control col-sm-9" type="text" ng-model="currentTech.currentVersion" value=""></br>
+  </div>
+  <div class="form-group row mx-0">
+    <label class="col-sm-2">Logo URL</label>
+    <input class="form-control col-sm-9" type="text" ng-model="currentTech.imageUrl" value=""></br>
+  </div>
+  <div class="form-group row mx-0">
+    <label class="col-sm-2">Description</label>
+    <textarea class="form-control col-sm-9" ng-model="currentTech.description" rows="8" cols="80"></textarea></br>
+  </div>
+  <div class="form-group row mx-0">
+    <input type="submit" value="Add" class="btn btn-primary col-2 ml-3"/>
+    <a class="btn btn-primary col-2 ml-3" href="/home">Cancel</a>
+  </div>
+</form>
