@@ -6,7 +6,7 @@ var techApp = angular.module('techApp',['ngRoute'])
                     });
                     $routeProvider.when('/addtech', {
                       templateUrl: 'templates/AddTech.html',
-                      controller: 'AddTech.html'
+                      controller: 'TechAddController'
                     });
                     $routeProvider.otherwise({
                       redirectTo: '/home'

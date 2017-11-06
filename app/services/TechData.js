@@ -1,11 +1,9 @@
 techApp.factory('techData', function ($http) {
-  let data;
-  $http.get('localhost:3000/techData')
-    .then((response) => {
-      data = response.data;
-    });
+  let dataFactory = {};
 
-    return {
-      techData: data
-    };
+  dataFactory.getList = () => {
+    return $http.get('http://localhost:3000/techData');
+  };
+
+  return dataFactory;
 });

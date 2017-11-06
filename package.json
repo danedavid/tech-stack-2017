@@ -4,11 +4,15 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "serve": "node app/server"
+    "serve": "node app/server",
+    "server": "json-server --watch app/db.json"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.2"
+  },
+  "devDependencies": {
+    "json-server": "^0.12.1"
   }
 }
